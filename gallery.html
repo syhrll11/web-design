@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #221f1f;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .gallery-container {
+            background: #221f1f;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            max-width: 800px;
+            width: 90%;
+            text-align: center;
+        }
+        h2 {
+            color: #52c4f1;
+            border-bottom: 3px solid #52c4f1;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            background: #ecf0f1;
+            padding: 10px 0;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .marquee {
+            display: inline-block;
+            animation: marquee 10s linear infinite;
+        }
+        .marquee img {
+            margin: 0 15px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .marquee img:hover {
+            transform: scale(1.1);
+        }
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <h2>Gallery</h2>
+        <div class="marquee-container">
+            <div class="marquee">
+                <img src="img/a.jpg" alt="img 1" width="150">
+                <img src="img/b.jpg" alt="img 2" width="150">
+                <img src="img/c.jpg" alt="img 3" width="150">
+                <img src="img/d.jpg" alt="img 4" width="150">
+                <img src="img/e.jpg" alt="Gambar 5" width="150">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
